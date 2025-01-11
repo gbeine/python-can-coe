@@ -56,6 +56,7 @@ class CoEType(IntEnum):
     HERTZ    = 19
     LITERSM  = 20 # Liters per minute
     BAR      = 21
+    TWOB     = 43 # Binary
 
 
 class CoE(BusABC):

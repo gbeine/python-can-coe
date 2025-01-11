@@ -15,7 +15,10 @@ class Message:
         self._node = node
         self._address = address
         self._value = value
-        self._datatype = datatype
+        if type(value) == bool:
+            self._datatype = CoEType.TWOB
+        else:
+            self._datatype = datatype
 
     @property
     def node(self) -> int:

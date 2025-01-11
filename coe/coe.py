@@ -124,3 +124,8 @@ class CoE(BusABC):
         peer = (str(self._peer_ip), self._peer_port)
         logger.debug("Sending message %s to %s" % (data.hex(), peer))
         self._socket.sendto(data, peer)
+
+
+    def shutdown(self) -> None:
+        self._socket.shutdown(socket.SHUT_RDWR)
+        super().shutdown()

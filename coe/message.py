@@ -16,7 +16,7 @@ class Message:
         self._address = address
         self._value = value
         if type(value) == bool:
-            self._datatype = CoEType.TWOB
+            self._datatype = CoEType.ONOFF
         else:
             self._datatype = datatype
 

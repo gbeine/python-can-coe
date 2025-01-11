@@ -56,7 +56,9 @@ class CoEType(IntEnum):
     HERTZ    = 19
     LITERSM  = 20 # Liters per minute
     BAR      = 21
-    TWOB     = 43 # Binary
+    ONOFF    = 43 # Binary ON/OFF (0 = OFF, 1 = ON)
+    PPM      = 67 # Parts per Million
+    W        = 69 # Watts
 
 
 class CoE(BusABC):

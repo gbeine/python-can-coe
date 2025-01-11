@@ -100,7 +100,7 @@ def _build_v2(messages: [type[Message]]) -> bytes:
         data[base+1] = messages[i].address - 1
         if digital:
             data[base+2] = 0
-            data[base+3] = CoEType.TWOB
+            data[base+3] = CoEType.ONOFF
             data[base+4] = int(messages[i].value)
         else:
             data[base+2] = 1

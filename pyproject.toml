@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 67.7", "setuptools_scm>=8"]
+requires = ["setuptools >= 67.7", "setuptools_scm>=8", "python-can>=4.5.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -21,11 +21,15 @@ license = {file = "LICENSE.md"}
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
   "Programming Language :: Python :: 3.8",
+  "Topic :: Home Automation",
+  "Topic :: Software Development :: Embedded Systems :: Controller Area Network (CAN)"
 ]
 
 [project.urls]
 Homepage = "https://c0d3.sh/smarthome/python-can-coe"
+Issues = "https://github.com/gbeine/python-can-coe/issues"
 
 [project.entry-points."can.interface"]
 coe = "coe.coe:CoE"
@@ -33,3 +37,5 @@ coe = "coe.coe:CoE"
 [tool.setuptools.packages.find]
 include = ["coe*"]
 
+[tool.setuptools.dynamic]
+version = {attr = "coe.__version__"}

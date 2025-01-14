@@ -101,7 +101,7 @@ class CoE(BusABC):
         if self._version == CoEVersion.V1:
             data, addr = self._socket.recvfrom(14)
         elif self._version == CoEVersion.V2:
-            data, addr = self._socket.recvfrom(36)
+            data, addr = self._socket.recvfrom(516)
         else:
             raise CanInitializationError("No valid CoE version specified: %s" % self._version)
 
